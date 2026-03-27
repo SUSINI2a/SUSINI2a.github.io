@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Charles SUSINI | Développeur</title>
+    <link rel="stylesheet" href="style2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+    <div class="header-container">
+        <div class="logo">Charles<span>.Portfolio</span></div>
+        <nav>
+            <ul>
+                <li><a href="#accueil" data-i18n="nav_home">Accueil</a></li>
+                <li><a href="#but-competences">Blocs BUT</a></li>
+                <li><a href="#projets" data-i18n="nav_projects">Projets</a></li>
+                <li><a href="#competences" data-i18n="nav_skills">Compétences</a></li>
+                <li><a href="#formation" data-i18n="nav_path">Parcours</a></li>
+                <li><a href="#contact" class="btn-contact" data-i18n="nav_contact">Me contacter</a></li>
+                <li><button id="lang-switch" class="btn-lang">🇬🇧 EN</button></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section id="accueil">
+    <div class="container hero-content">
+        <div class="hero-text">
+            <span class="badge" data-i18n="hero_badge">Étudiant en BUT Informatique - 2ème année</span>
+            <h1><span data-i18n="hero_hello">Salut, je suis</span> <span class="gradient-text">Charles SUSINI</span></h1>
+            
+            <h2 style="font-size: 1.8rem; margin-top: 10px; color: var(--text-muted);">
+                <span data-i18n="hero_iam">Je suis</span> <span class="typing-text"></span>
+            </h2>
+            
+            <p data-i18n="hero_desc">Déterminé, motivé et sérieux, je suis passionné par le <strong>développement web</strong> et l'innovation technologique. Autonome et conscient du travail à fournir, je cherche un stage de minimum 8 semaines pour parfaire mes compétences techniques en solutions concrètes.</p>
+            
+            <div class="hero-buttons">
+                <a href="#projets" class="btn-primary" data-i18n="btn_projects">Voir mes projets</a>
+                <a href="cv_charles_susini.pdf" target="_blank" class="btn-secondary"><i class="fas fa-download"></i> <span data-i18n="btn_cv">Télécharger mon CV</span></a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="image-wrapper">
+                <img src="photo.jpg" alt="Charles SUSINI">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="mission-objectifs" class="section-gray">
+    <div class="container grid-2">
+        <div class="text-block">
+            <h2 data-i18n="mission_title">Ma Mission</h2>
+            <p data-i18n="mission_text">Déterminé, motivé, sérieux, autonome et conscient du travail qui m'attend, je suis persuadé que je serai un élément moteur au sein de votre structure. Mon parcours sportif (rugby, tennis) m'a appris l'esprit d'équipe et la persévérance, tandis que mes projets en HTML, Java, C et SQL m'ont donné la rigueur technique nécessaire pour relever des défis complexes.</p>
+        </div>
+        <div class="text-block">
+            <h2 data-i18n="goals_title">Mes Objectifs</h2>
+            <ul class="goals-list">
+                <li><strong data-i18n="goal_short_label">Court terme :</strong> <span data-i18n="goal_short_text">Stage de développement web/logiciel (2ème année BUT).</span></li>
+                <li><strong data-i18n="goal_short_label">Moyen terme :</strong> <span data-i18n="goal_short_text">Après l'obtention de mon BUT, j'ai pour ambition de poursuivre mes études en Master MIAGE ou d'intégrer une école d'ingénieurs.</span></li>
+                <li><strong data-i18n="goal_long_label">Long terme :</strong> <span data-i18n="goal_long_text">Devenir développeur en Corse et contribuer à l'écosystème technologique local.</span></li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<section id="but-competences">
+    <div class="container">
+        <h2 class="section-title">Blocs de compétences BUT</h2>
+        <p class="but-subtitle">Les 6 compétences du référentiel national · Parcours A — Réalisation d'applications. Cliquez sur un bloc pour découvrir la description, les projets validants et les points de progression.</p>
+
+        <div class="but-grid">
+
+            <div class="but-card" data-comp="realiser" onclick="toggleBut(this)">
+                <div class="but-card-header">
+                    <span class="but-bloc-num">Bloc 01</span>
+                    <span class="but-name">Réaliser un développement d'application</span>
+                    <span class="but-tagline">Conception, développement, tests</span>
+                    <span class="but-corner-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                </div>
+                <div class="but-levels">
+                    <span class="but-pill" style="background:#fde8e8;color:#c0392b;border-color:rgba(192,57,43,0.2);">N1 · Apps simples</span>
+                    <span class="but-pill" style="background:#fde8e8;color:#c0392b;border-color:rgba(192,57,43,0.2);">N2 · App complète</span>
+                    <span class="but-pill" style="background:#fde8e8;color:#c0392b;border-color:rgba(192,57,43,0.2);">N3 · Multi-supports</span>
+                </div>
+                <div class="but-body">
+                    <div class="but-body-inner">
+                        <div class="but-desc-col">
+                            <p class="but-desc">Ce bloc couvre la capacité à concevoir, développer et tester une application informatique de manière complète : de l'analyse du besoin jusqu'à la livraison d'un logiciel fonctionnel et testé. Il englobe la modélisation (Merise, UML), le développement dans différents paradigmes (objet, procédural, web), et la mise en place de tests pour valider le comportement du programme.</p>
+                            <div class="but-section-label">Ce que je sais faire — Argumentaire</div>
+                            <div class="but-projects">
+                                <div class="but-proj">
+                                    <div class="but-proj-icon" style="background:#fde8e8;color:#c0392b;"><i class="fas fa-cubes"></i></div>
+                                    <div class="but-proj-info">
+                                        <span class="but-proj-name">Mosaïque Lego — Projet Intégré S3</span>
+                                        <span class="but-proj-desc">Application full-stack complète : algorithme C, interface web PHP/MySQL, backend Java. Architecture Merise (MCD/MLD/MPD) réalisée en amont.</span>
+                                        <div class="but-tags"><span>C</span><span>Java</span><span>PHP</span><span>MySQL</span><span>Merise</span></div>
+                                    </div>
+                                </div>
+                                <div class="but-proj">
+                                    <div class="but-proj-icon" style="background:#fde8e8;color:#c0392b;"><i class="fas fa-gamepad"></i></div>
+                                    <div class="but-proj-info">
+                                        <span class="but-proj-name">Tetris en Python</span>
+                                        <span class="but-proj-desc">Jeu complet avec interface graphique Pygame, gestion des collisions, rotations et système de scores — sans framework.</span>
+                                        <div class="but-tags"><span>Python</span><span>Pygame</span></div>
+                                    </div>
+                                </div>
+                                <div class="but-proj">
+                                    <div class="but-proj-icon" style="background:#fde8e8;color:#c0392b;"><i class="fas fa-dice"></i></div>
+                                    <div class="but-proj-info">
+                                        <span class="but-proj-name">Yahtzee en Java</span>
+                                        <span class="but-proj-desc">Architecture MVC propre avec interface FXML, séparation logique métier / vue, gestion complète des règles et sauvegarde des parties.</span>
+                                        <div class="but-tags"><span>Java</span><span>MVC</span><span>FXML</span><span>POO</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="but-right-col">
+                            <div class="but-section-label">Points de progression</div>
+                            <div class="but-progression">
+                                <div class="but-progression-title"><i class="fas fa-seedling"></i> Ce que je ne maîtrise pas encore</div>
+                                <p>Je ne maîtrise pas encore les diagrammes UML de manière avancée (séquence, cas d'utilisation détaillés), ni les frameworks de test automatisé de bout en bout (ex : Selenium, Cypress). L'accessibilité (WCAG, ARIA) n'a pas encore été intégrée dans mes développements web.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="but-card" data-comp="optimiser" onclick="toggleBut(this)">
+                <div class="but-card-header">
+                    <span class="but-bloc-num">Bloc 02</span>
+                    <span class="but-name">Optimiser des applications informatiques</span>
+                    <span class="but-tagline">Performance, qualité, maintenance</span>
+                    <span class="but-corner-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                </div>
+                <div class="but-levels">
+                    <span class="but-pill" style="background:#fef3e2;color:#d35400;border-color:rgba(211,84,0,0.2);">N1 · Construire des algos</span>
+                    <span class="but-pill" style="background:#fef3e2;color:#d35400;border-color:rgba(211,84,0,0.2);">N2 · Algos adaptés</span>
+                    <span class="but-pill" style="background:#fef3e2;color:#d35400;border-color:rgba(211,84,0,0.2);">N3 · Analyser & optimiser</span>
+                </div>
+                <div class="but-body">
+                    <div class="but-body-inner">
+                        <div class="but-desc-col">
+                            <p class="but-desc">Sélectionner et concevoir des algorithmes efficaces pour résoudre des problèmes donnés. Comprendre la complexité algorithmique, choisir les structures de données appropriées, et améliorer les performances des applications existantes en tenant compte des contraintes (temps, mémoire, lisibilité).</p>
+                            <div class="but-section-label">Ce que je sais faire — Argumentaire</div>
+                            <div class="but-projects">
+                                <div class="but-proj">
+                                    <div class="but-proj-icon" style="background:#fef3e2;color:#d35400;"><i class="fas fa-calculator"></i></div>
+                                    <div class="but-proj-info">
+                                        <span class="but-proj-name">Manipulation de Polynômes en C</span>
+                                        <span class="but-proj-desc">Conception d'algorithmes mathématiques (dérivation, multiplication) avec structures de données adaptées (listes chaînées).</span>
+                                        <div class="but-tags"><span>C</span><span>Algorithmique</span><span>Structures de données</span></div>
+                                    </div>
+                                </div>
+                                <div class="but-proj">
+                                    <div class="but-proj-icon" style="background:#fef3e2;color:#d35400;"><i class="fas fa-cubes"></i></div>
+                                    <div class="but-proj-info">
+                                        <span class="but-proj-name">Mosaïque Lego — Algorithme de pavage</span>
+                                        <span class="but-proj-desc">Algorithme optimisé de transformation d'image avec plusieurs modes de rendu et traitement de données massives.</span>
+                                        <div class="but-tags"><span>C</span><span>Algorithmique</span><span>Optimisation</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="but-right-col">
+                            <div class="but-section-label">Points de progression</div>
+                            <div class="but-progression">
+                                <div class="but-progression-title"><i class="fas fa-seedling"></i> Ce que je ne maîtrise pas encore</div>
+                                <p>Je n'ai pas encore travaillé sur des problèmes de complexité avancée (NP-difficiles, programmation dynamique complexe). Le profiling de performance (Valgrind, gprof) et l'optimisation bas niveau (SIMD, cache) restent à approfondir.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="but-card" data-comp="administrer" onclick="toggleBut(this)">
+                <div class="but-card-header">
+                    <span class="but-bloc-num">Bloc 03</span>
+                    <span class="but-name">Administrer des systèmes informatiques communicants complexes</span>
+                    <span class="but-tagline">Systèmes, réseaux, sécurité</span>
+                    <span class="but-corner-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                </div>
+                <div class="but-levels">
+                    <span class="but-pill" style="background:#fefce8;color:#b7950b;border-color:rgba(183,149,11,0.2);">N1 · Poste de travail</span>
+                    <span class="but-pill" style="background:#fefce8;color:#b7950b;border-color:rgba(183,149,11,0.2);">N2 · Architecture réseau</span>
+                </div>
+                <div class="but-body">
+                    <div class="but-body-inner">
+                        <div class="but-desc-col">
+                            <p class="but-desc">Installer et configurer les environnements de travail, puis déployer des services sur des architectures réseau. Cela couvre la gestion des systèmes Linux, la configuration de serveurs web et de bases de données, et la sécurisation des communications réseau.</p>
+                            <div class="but-section-label">Ce que je sais faire — Argumentaire</div>
+                            <div class="but-projects">
+                                <div class="but-proj">
+                                    <div class="but-proj-icon" style="background:#fefce8;color:#b7950b;"><i class="fas fa-server"></i></div>
+                                    <div class="but-proj-info">
+                                        <span class="but-proj-name">Serveur HTTPS & Réseaux</span>
+                                        <span class="but-proj-desc">Installation, configuration et sécurisation d'un serveur Apache sous Linux avec analyse de trames Wireshark.</span>
+                                        <div class="but-tags"><span>Linux</span><span>Apache</span><span>Wireshark</span><span>HTTPS</span></div>
+                                    </div>
+                                </div>
+                                <div class="but-proj">
+                                    <div class="but-proj-icon" style="background:#fefce8;color:#b7950b;"><i class="fas fa-database"></i></div>
+                                    <div class="but-proj-info">
+                                        <span class="but-proj-name">Déploiement Base de données & Web</span>
+                                        <span class="but-proj-desc">Déploiement d'un serveur PHP/MySQL, configuration système et administration de la BDD relationnelle en production.</span>
+                                        <div class="but-tags"><span>MySQL</span><span>PHP</span><span>Serveur</span><span>Administration</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="but-right-col">
+                            <div class="but-section-label">Points de progression</div>
+                            <div class="but-progression">
+                                <div class="but-progression-title"><i class="fas fa-seedling"></i> Ce que je ne maîtrise pas encore</div>
+                                <p>La virtualisation (Docker, Kubernetes) et la gestion de conteneurs n'ont pas encore été pratiquées. Le scripting shell avancé pour l'automatisation de déploiements (CI/CD) reste à approfondir. La configuration avancée de pare-feu et les architectures VPN ne font pas encore partie de mes compétences consolidées.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="but-card" data-comp="gerer" onclick="toggleBut(this)">
+                <div class="but-card-header">
+                    <span class="but-bloc-num">Bloc 04</span>
+                    <span class="but-name">Gérer des données de l'information</span>
+                    <span class="but-tagline">Modélisation, BDD, requêtes, exploitation</span>
+                    <span class="but-corner-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                </div>
+                <div class="but-levels">
+                    <span class="but-pill" style="background:#e8f5e9;color:#27ae60;border-color:rgba(39,174,96,0.2);">N1 · BDD à partir d'un CDC</span>
+                    <span class="but-pill" style="background:#e8f5e9;color:#27ae60;border-color:rgba(39,174,96,0.2);">N2 · Optimiser & sécuriser</span>
+                </div>
+                <div class="but-body">
+                    <div class="but-body-inner">
+                        <div class="but-desc-col">
+                            <p class="but-desc">Concevoir et mettre en place des bases de données relationnelles à partir de cahiers des charges (MCD/MLD), puis les exploiter via des requêtes SQL complexes, avec optimisation des performances et sécurisation des accès.</p>
+                            <div class="but-section-label">Ce que je sais faire — Argumentaire</div>
+                            <div class="but-projects">
+                                <div class="but-proj">
+                                    <div class="but-proj-icon" style="background:#e8f5e9;color:#27ae60;"><i class="fas fa-database"></i></div>
+                                    <div class="but-proj-info">
+                                        <span class="but-proj-name">Base de données & Web</span>
+                                        <span class="but-proj-desc">Conception MCD/MLD complète, création et exploitation d'une BDD relationnelle via interface web dynamique.</span>
+                                        <div class="but-tags"><span>MySQL</span><span>SQL</span><span>MCD/MLD</span><span>MPD</span></div>
+                                    </div>
+                                </div>
+                                <div class="but-proj">
+                                    <div class="but-proj-icon" style="background:#e8f5e9;color:#27ae60;"><i class="fas fa-shopping-cart"></i></div>
+                                    <div class="but-proj-info">
+                                        <span class="but-proj-name">Mosaïque Lego — Site E-commerce</span>
+                                        <span class="but-proj-desc">Site e-commerce gérant les stocks, commandes et utilisateurs. Utilisation conjointe d'une BDD relationnelle (MySQL) et NoSQL (MongoDB) avec sécurisation des accès.</span>
+                                        <div class="but-tags"><span>MySQL</span><span>MongoDB</span><span>NoSQL</span><span>Transactions</span></div>
+                                    </div>
+                                </div>
+                                <div class="but-proj">
+                                    <div class="but-proj-icon" style="background:#e8f5e9;color:#27ae60;"><i class="fas fa-users"></i></div>
+                                    <div class="but-proj-info">
+                                        <span class="but-proj-name">Réseau Social Seniors</span>
+                                        <span class="but-proj-desc">Modélisation et gestion d'une BDD pour messagerie, agenda et événements communautaires.</span>
+                                        <div class="but-tags"><span>MySQL</span><span>PHP</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="but-right-col">
+                            <div class="but-section-label">Points de progression</div>
+                            <div class="but-progression">
+                                <div class="but-progression-title"><i class="fas fa-seedling"></i> Ce que je ne maîtrise pas encore</div>
+                                <p>Les systèmes de bases de données distribuées à très grande échelle et la gestion de la montée en charge (sharding, réplication) restent à approfondir. L'optimisation très avancée de requêtes (plans d'exécution, index composites) est également un axe de perfectionnement.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="but-card" data-comp="conduire" onclick="toggleBut(this)">
+                <div class="but-card-header">
+                    <span class="but-bloc-num">Bloc 05</span>
+                    <span class="but-name">Conduire un projet</span>
+                    <span class="but-tagline">Gestion de projet, équipe, méthodes, communication</span>
+                    <span class="but-corner-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                </div>
+                <div class="but-levels">
+                    <span class="but-pill" style="background:#e3f2fd;color:#1565c0;border-color:rgba(21,101,192,0.2);">N1 · Identifier les besoins</span>
+                    <span class="but-pill" style="background:#e3f2fd;color:#1565c0;border-color:rgba(21,101,192,0.2);">N2 · Suivi de projet</span>
+                </div>
+                <div class="but-body">
+                    <div class="but-body-inner">
+                        <div class="but-desc-col">
+                            <p class="but-desc">Identifier les besoins métiers des clients et des utilisateurs pour y répondre efficacement. Appliquer une démarche de suivi de projet (planification, méthodes agiles ou classiques) en intégrant les contraintes et en livrant dans les délais impartis.</p>
+                            <div class="but-section-label">Ce que je sais faire — Argumentaire</div>
+                            <div class="but-projects">
+                                <div class="but-proj">
+                                    <div class="but-proj-icon" style="background:#e3f2fd;color:#1565c0;"><i class="fas fa-sync-alt"></i></div>
+                                    <div class="but-proj-info">
+                                        <span class="but-proj-name">Appli Bancaire & Réservation de Train</span>
+                                        <span class="but-proj-desc">Suivi de projet avec la méthodologie agile Scrum. Découpage en sprints, gestion du backlog, itérations et adaptations selon les besoins métiers.</span>
+                                        <div class="but-tags"><span>Scrum</span><span>Agile</span><span>Suivi de projet</span></div>
+                                    </div>
+                                </div>
+                                <div class="but-proj">
+                                    <div class="but-proj-icon" style="background:#e3f2fd;color:#1565c0;"><i class="fas fa-landmark"></i></div>
+                                    <div class="but-proj-info">
+                                        <span class="but-proj-name">Projet UNESCO — Quais de Seine</span>
+                                        <span class="but-proj-desc">Projet client avec cahier des charges, gestion d'une équipe de 5, livrables respectant les exigences de l'UNESCO.</span>
+                                        <div class="but-tags"><span>Gestion projet</span><span>Figma</span><span>Équipe ×5</span><span>CDC</span></div>
+                                    </div>
+                                </div>
+                                <div class="but-proj">
+                                    <div class="but-proj-icon" style="background:#e3f2fd;color:#1565c0;"><i class="fas fa-cubes"></i></div>
+                                    <div class="but-proj-info">
+                                        <span class="but-proj-name">Mosaïque Lego — Projet Intégré S3</span>
+                                        <span class="but-proj-desc">Projet multi-équipes avec contraintes de livraison, répartition des tâches et intégration de modules hétérogènes.</span>
+                                        <div class="but-tags"><span>Conduite projet</span><span>Intégration</span><span>Planification</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="but-right-col">
+                            <div class="but-section-label">Points de progression</div>
+                            <div class="but-progression">
+                                <div class="but-progression-title"><i class="fas fa-seedling"></i> Ce que je ne maîtrise pas encore</div>
+                                <p>La gestion des risques avancée et la rédaction de documents de projet extrêmement formels (PMP, charte de projet) dans un cadre institutionnel restent à développer. L'utilisation d'outils de ticketing complexes à l'échelle d'une grande entreprise est un point à approfondir.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="but-card" data-comp="collaborer" onclick="toggleBut(this)">
+                <div class="but-card-header">
+                    <span class="but-bloc-num">Bloc 06</span>
+                    <span class="but-name">Construire son parcours professionnel</span>
+                    <span class="but-tagline">PPP, insertion, soft skills, collaboration</span>
+                    <span class="but-corner-arrow"><i class="fas fa-arrow-up-right-from-square"></i></span>
+                </div>
+                <div class="but-levels">
+                    <span class="but-pill" style="background:#eceff1;color:#546e7a;border-color:rgba(84,110,122,0.2);">N1 · S'intégrer à une équipe</span>
+                    <span class="but-pill" style="background:#eceff1;color:#546e7a;border-color:rgba(84,110,122,0.2);">N2 · Situer son rôle</span>
+                    <span class="but-pill" style="background:#eceff1;color:#546e7a;border-color:rgba(84,110,122,0.2);">N3 · Manager</span>
+                </div>
+                <div class="but-body">
+                    <div class="but-body-inner">
+                        <div class="but-desc-col">
+                            <p class="but-desc">Identifier ses aptitudes pour travailler en équipe et construire son parcours professionnel. Être capable de situer mon rôle et mes missions au sein d'une équipe, prendre une place active au sein d'un groupe technique, communiquer efficacement, partager le code et co-construire des solutions durables. Développer une vision de son évolution dans le secteur informatique.</p>
+                            <div class="but-section-label">Ce que je sais faire — Argumentaire</div>
+                            <div class="but-projects">
+                                <div class="but-proj">
+                                    <div class="but-proj-icon" style="background:#eceff1;color:#546e7a;"><i class="fas fa-landmark"></i></div>
+                                    <div class="but-proj-info">
+                                        <span class="but-proj-name">Projet UNESCO — Quais de Seine</span>
+                                        <span class="but-proj-desc">Travail en groupe de 5, répartition des rôles, design collaboratif sur Figma et développement commun en équipe.</span>
+                                        <div class="but-tags"><span>Teamwork</span><span>Figma</span><span>Git</span><span>Communication</span></div>
+                                    </div>
+                                </div>
+                                <div class="but-proj">
+                                    <div class="but-proj-icon" style="background:#eceff1;color:#546e7a;"><i class="fas fa-comments"></i></div>
+                                    <div class="but-proj-info">
+                                        <span class="but-proj-name">Chat Seniors</span>
+                                        <span class="but-proj-desc">Projet collaboratif avec répartition des fonctionnalités, revues de code mutuelles et intégration continue des modules.</span>
+                                        <div class="but-tags"><span>Collaboration</span><span>PHP</span><span>MySQL</span></div>
+                                    </div>
+                                </div>
+                                <div class="but-proj">
+                                    <div class="but-proj-icon" style="background:#eceff1;color:#546e7a;"><i class="fas fa-cubes"></i></div>
+                                    <div class="but-proj-info">
+                                        <span class="but-proj-name">Mosaïque Lego — Projet Intégré S3</span>
+                                        <span class="but-proj-desc">Coordination entre modules (C, Java, PHP) développés par différents membres, intégration et interfaces entre équipes.</span>
+                                        <div class="but-tags"><span>Multi-équipe</span><span>Intégration</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="but-right-col">
+                            <div class="but-section-label">Points de progression</div>
+                            <div class="but-progression">
+                                <div class="but-progression-title"><i class="fas fa-seedling"></i> Ce que je ne maîtrise pas encore</div>
+                                <p>Les outils de collaboration professionnels (Git avancé avec stratégies de branching, code review formelles, pair programming structuré) restent à pratiquer davantage. La prise de parole en public et la présentation de solutions techniques à des non-techniques est un axe à renforcer.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div></div></section>
+
+<section id="projets">
+    <div class="container">
+        <h2 class="section-title" data-i18n="title_projects">Projets Récents</h2>
+        <div class="projects-grid">
+            
+            <div class="project-card featured">
+                <div class="card-header">
+                    <i class="fas fa-cubes icon-project"></i>
+                    <h3>Mosaïque Lego - Site E-commerce S3</h3>
+                </div>
+                <p>Site e-commerce complet de transformation d'images en mosaïques LEGO. Algorithme de pavage en C, interface web PHP, backend Java, et gestion des stocks/commandes utilisant une architecture de données hybride MySQL et MongoDB (NoSQL).</p>
+                <div class="tags">
+                    <span>C</span><span>Java</span><span>PHP</span><span>MySQL</span><span>MongoDB</span><span>E-commerce</span>
+                </div>
+                <div class="card-footer">
+                    <span class="date">Semestre 3 - 2025</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-header">
+                    <i class="fas fa-chart-line icon-project"></i>
+                    <h3>Gestion Compte Bancaire - Qualité Dev</h3>
+                </div>
+                <p>Application de gestion avec visualisation graphique des revenus et dépenses. Projet piloté avec la méthodologie agile Scrum (sprints, backlog), fortement axé sur les bonnes pratiques de développement et l'architecture logicielle.</p>
+                <div class="tags">
+                    <span>Java</span><span>JavaFX</span><span>Scrum</span><span>Architecture MVC</span>
+                </div>
+                <div class="card-footer">
+                    <span class="date">Semestre 3 - 2025</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-header">
+                    <i class="fas fa-landmark icon-project"></i>
+                    <h3>Projet UNESCO - Quais de Seine</h3>
+                </div>
+                <p>Site éducatif développé en partenariat avec l'UNESCO sur le patrimoine des quais de Seine. Design responsive en groupe de 5.</p>
+                <div class="tags">
+                    <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Figma</span>
+                </div>
+                <div class="card-footer">
+                    <span class="date">Projet académique</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-header">
+                    <i class="fas fa-database icon-project"></i>
+                    <h3>Base de données & Web</h3>
+                </div>
+                <p>Création et exploitation d'une BDD relationnelle (MCD/MLD) via une interface web dynamique.</p>
+                <div class="tags">
+                    <span>MySQL</span><span>PHP</span><span>SQL</span>
+                </div>
+                <div class="card-footer">
+                    <span class="date">Juin 2025</span>
+                </div>
+            </div>
+
+            <div class="project-card featured">
+                <div class="card-header">
+                    <i class="fas fa-train icon-project"></i>
+                    <h3 data-i18n="proj_train_title">Réservation de Billets de Train — BUT2 S4</h3>
+                </div>
+                <p data-i18n="proj_train_desc">Application full-stack gérée en méthode agile Scrum. Front-end React avec gestion des routes, backend Node.js avec API REST, et base de données MongoDB (NoSQL) pour les trajets et réservations.</p>
+                <div class="tags">
+                    <span>React</span><span>Node.js</span><span>MongoDB</span><span>Scrum</span><span>REST API</span>
+                </div>
+                <div class="card-footer">
+                    <span class="date" data-i18n="proj_train_date">Semestre 4 — 2026</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-header">
+                    <i class="fas fa-gamepad icon-project"></i>
+                    <h3 data-i18n="proj_tetris_title">Tetris en Python</h3>
+                </div>
+                <p data-i18n="proj_tetris_desc">Jeu complet avec interface graphique Pygame et gestion des scores.</p>
+                <div class="tags">
+                    <span>Python</span><span>Pygame</span>
+                </div>
+                <div class="card-footer">
+                    <a href="tetris.zip" class="link-text" data-i18n="link_code">Voir le code →</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-header">
+                    <i class="fas fa-server icon-project"></i>
+                    <h3 data-i18n="proj_server_title">Serveur HTTPS &amp; Réseaux</h3>
+                </div>
+                <p data-i18n="proj_server_desc">Installation, configuration et sécurisation d'un serveur local Apache sous Linux.</p>
+                <div class="tags">
+                    <span>Linux</span><span>Apache</span><span>Wireshark</span>
+                </div>
+                <div class="card-footer">
+                    <a href="SAE réseaux_Rapport.pdf" class="link-text" data-i18n="proj_server_link">Lire le rapport →</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="card-header">
+                    <i class="fas fa-comments icon-project"></i>
+                    <h3 data-i18n="proj_seniors_title">Chat Seniors</h3>
+                </div>
+                <p data-i18n="proj_seniors_desc">Plateforme sociale adaptée aux seniors : messagerie, agenda, événements.</p>
+                <div class="tags">
+                    <span>PHP</span><span>MySQL</span><span>JavaScript</span>
+                </div>
+                <div class="card-footer">
+                    <a href="projet_seniors.zip" class="link-text" data-i18n="proj_seniors_link">Télécharger →</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="competences" class="section-gray">
+    <div class="container">
+        <h2 class="section-title" data-i18n="title_skills">Stack Technique</h2>
+        <div class="skills-grid">
+            
+            <div class="skill-item">
+                <div class="skill-icon"><img src="img/htmlcss.png" alt="Web"></div>
+                <div class="skill-info">
+                    <h3>HTML / CSS</h3>
+                    <div class="progress-bar"><div class="fill" style="width: 90%"></div></div>
+                </div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-icon"><img src="img/java.png" alt="Java"></div>
+                <div class="skill-info">
+                    <h3>Java / JavaFX</h3>
+                    <div class="progress-bar"><div class="fill" style="width: 80%"></div></div>
+                </div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-icon"><img src="img/sql.png" alt="Base de données"></div>
+                <div class="skill-info">
+                    <h3>SQL & NoSQL (MongoDB)</h3>
+                    <div class="progress-bar"><div class="fill" style="width: 85%"></div></div>
+                </div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-icon"><i class="fab fa-react" style="font-size: 2.5rem; color: #61DAFB;"></i></div>
+                <div class="skill-info">
+                    <h3>React & Node.js</h3>
+                    <div class="progress-bar"><div class="fill" style="width: 75%"></div></div>
+                </div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-icon"><img src="img/python.png" alt="Python"></div>
+                <div class="skill-info">
+                    <h3>Python</h3>
+                    <div class="progress-bar"><div class="fill" style="width: 70%"></div></div>
+                </div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-icon"><img src="img/c.png" alt="C"></div>
+                <div class="skill-info">
+                    <h3>Langage C</h3>
+                    <div class="progress-bar"><div class="fill" style="width: 65%"></div></div>
+                </div>
+            </div>
+
+            <div class="skill-item">
+                <div class="skill-icon"><img src="img/network.png" alt="Réseaux"></div>
+                <div class="skill-info">
+                    <h3 data-i18n="skill_network">Réseaux & Linux</h3>
+                    <div class="progress-bar"><div class="fill" style="width: 60%"></div></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="soft-skills">
+            <h3 data-i18n="title_softskills">Soft Skills</h3>
+            <div class="tags large-tags">
+                <span data-i18n="soft_team">Travail d'équipe</span>
+                <span data-i18n="soft_autonomy">Autonomie</span>
+                <span data-i18n="soft_org">Organisation</span>
+                <span data-i18n="soft_det">Détermination</span>
+                <span data-i18n="soft_rigor">Rigueur</span>
+                <span data-i18n="soft_agile">Méthodes Agiles (Scrum)</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="formation">
+    <div class="container">
+        <h2 class="section-title" data-i18n="title_path">Parcours</h2>
+        <div class="timeline-wrapper">
+            
+            <div class="timeline-column">
+                <h3><i class="fas fa-graduation-cap"></i> <span data-i18n="subtitle_education">Formation</span></h3>
+                <div class="timeline-box">
+                    <span class="year">2025 - 2026</span>
+                    <h4>BUT Informatique - 2ème année</h4>
+                    <p data-i18n="edu_but2">IUT - Spécialisation développement & projets avancés</p>
+                </div>
+                <div class="timeline-box">
+                    <span class="year">2024 - 2025</span>
+                    <h4>BUT Informatique - 1ère année</h4>
+                    <p data-i18n="edu_but1">IUT - Développement, Réseaux, BDD</p>
+                </div>
+                <div class="timeline-box">
+                    <span class="year">2023 - 2024</span>
+                    <h4>Prépa intégrée</h4>
+                    <p>ESIEE Paris - École d'ingénieur</p>
+                </div>
+                <div class="timeline-box">
+                    <span class="year">2023</span>
+                    <h4>Bac Général</h4>
+                    <p>Maths & Physique-Chimie (Mention Assez Bien)</p>
+                </div>
+            </div>
+
+            <div class="timeline-column">
+                <h3><i class="fas fa-briefcase"></i> <span data-i18n="subtitle_exp">Expériences</span></h3>
+                <div class="timeline-box">
+                    <span class="year">Été 2025</span>
+                    <h4 data-i18n="exp_job1_title">Agent navette portuaire</h4>
+                    <p data-i18n="exp_job1_desc">Mairie de Porticcio - Gestion des navettes et relation client</p>
+                </div>
+                <div class="timeline-box">
+                    <span class="year">Été 2024</span>
+                    <h4>Agent navette portuaire</h4>
+                    <p>Mairie de Porticcio - Gestion clients & logistique</p>
+                </div>
+                <div class="timeline-box">
+                    <span class="year">Été 2022</span>
+                    <h4>Ouvrier en bâtiment</h4>
+                    <p>Ortu, Moca-Croce - Rigueur, discipline & précision</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container contact-container">
+        <div class="contact-info">
+            <h2 data-i18n="contact_title">Travaillons ensemble</h2>
+            <p data-i18n="contact_text">Je suis disponible pour un entretien afin de discuter de votre besoin et de ma motivation.</p>
+            <div class="contact-links">
+                <a href="mailto:susinicharles1724@gmail.com"><i class="fas fa-envelope"></i> susinicharles1724@gmail.com</a>
+                <p><i class="fas fa-phone"></i> 06 15 62 36 25</p>
+                <a href="https://www.linkedin.com/in/charles-susini" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </div>
+        <form action="mailto:susinicharles1724@gmail.com" method="post" enctype="text/plain" class="modern-form">
+            <div class="form-group">
+                <label for="nom" data-i18n="form_name">Nom</label>
+                <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+            </div>
+            <div class="form-group">
+                <label for="email" data-i18n="form_email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Votre email" required>
+            </div>
+            <div class="form-group">
+                <label for="message" data-i18n="form_message">Message</label>
+                <textarea id="message" name="message" placeholder="Comment puis-je vous aider ?" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn-submit" data-i18n="btn_send">Envoyer le message</button>
+        </form>
+    </div>
+</section>
+
+
+<footer>
+    <p>© 2025 Charles SUSINI — Portfolio étudiant.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
